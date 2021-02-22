@@ -3,12 +3,8 @@ import numeral from 'numeral';
 import { useCartContext } from '../../../wrap-with-provider';
 import { cartQuantityTotal, cartAmountTotal } from '../../selectors/cartQuantity';
 import styles from './checkout-summary.module.css';
-// "react-toastify": "^7.0.3",
-// import 'react-toastify/dist/ReactToastify.css';
-// import '../../styles/ReactToastify.css';
 
 const CheckoutSummary = ({ shippingValues }) => {
-    console.log('CheckoutSummary....')
     const { cart, cartDispatch } = useCartContext();
     const [showItems, setShowItems] = useState(false);
     const [error, setError] = useState('');
