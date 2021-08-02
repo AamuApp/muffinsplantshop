@@ -9,13 +9,14 @@ The original author is [https://github.com/nhuynh1](Nancy), who we want to thank
 
 - An account at [Aamu.app](Aamu.app).
 - A *database* at Aamu.app and an API key to this database.
-- A [Stripe](https://stripe.com/) account and a secret key (testing key is OK).
+- A [Stripe](https://stripe.com/) account and a secret API key (Dashboard/Developers/API keys) (testing key is OK).
 
 ## Installation
 
-- Click "Deploy to Netlify" (below)
-- Insert your secret keys
-- After Netlify is done building, edit the file `config-client.js` and insert your Stripe public key
+- Click "Deploy to Netlify" (see below).
+- Click "Connect to GitHub".
+- Insert your secret keys (Aamu.app + Stripe).
+- After Netlify is done building, edit the file `config-client.js` and insert your Stripe public key, commit the file.
 - After Netlify is done building again, everything should work. If not, go through every step to make sure everything was done correctly.
 
 ## Live demo hosted on Netlify
