@@ -19,6 +19,14 @@ The original author is [https://github.com/nhuynh1](Nancy), who we want to thank
 - After Netlify is done building, go to your repository at GitHub and edit the file `config-client.js` and insert your Stripe *public key*, commit the file.
 - After Netlify is done building again, everything should work. If not, go through every step to make sure everything was done correctly.
 
+## General notes
+
+This is a demo, a starting point that you should probably edit quite a bit until it's ready for your needs. At the moment the following is true:
+
+- The products are hosted on Aamu.app. 
+- The purchases will be visible at Stripe. Currently they will not be stored into Aamu.app. This is something you can change if you need to.
+- At the moment there is no email confirmation for the customer. This is also something that needs to be added when this is taken to production use.
+
 ## Live demo hosted on Netlify
 [https://aamu-muffinsplantshop.netlify.app/](https://aamu-muffinsplantshop.netlify.app/)
 
