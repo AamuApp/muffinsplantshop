@@ -13,7 +13,7 @@ The original author is [https://github.com/nhuynh1](Nancy), who we want to thank
 
 ## Installation
 
-- Click "Deploy to Netlify"
+- Click "Deploy to Netlify" (below)
 - Insert your secret keys
 - After Netlify is done building, edit the file `config-client.js` and insert your Stripe public key
 - After Netlify is done building again, everything should work. If not, go through every step to make sure everything was done correctly.
@@ -24,7 +24,7 @@ The original author is [https://github.com/nhuynh1](Nancy), who we want to thank
 ## Payment processing
 Card payment via Stripe in testing mode; please use testing card details shown on the form
 
-## Usage on a third party hosting service
+## Deploying to Netlify
 
 You can deploy this on Netlify: 
 
