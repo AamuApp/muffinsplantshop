@@ -1,15 +1,15 @@
 import React from 'react';
 import numeral from 'numeral';
 import { Link } from 'gatsby';
-import Img from "gatsby-image";
-import styles from './product-item.module.css';
+import { GatsbyImage } from "gatsby-plugin-image"
+import * as styles from  './product-item.module.css';
 
 const ProductItem = ({ product }) => {
     return (
         <div className={styles.productItem}>
             <Link to={'/'+product.category.slug+'/'+product.slug}>
-                <Img 
-                    fluid={product.fluid}
+                <GatsbyImage 
+                    image={product.image}
                     alt={product.title}
                     style={{margin: `0 0 0.25rem 0`}}
                 />

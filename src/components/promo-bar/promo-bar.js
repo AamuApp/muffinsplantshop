@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './promo-bar.module.css';
+import * as styles from  './promo-bar.module.css';
 
 const PromoBar = () => {
     return (

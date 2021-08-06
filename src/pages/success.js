@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const Success = ({ data, location }) => {
     return (
 	    <Layout location={location}>
-	      <SEO title="Success" />
+	      <Seo title="Success" />
 	      <div style={{ display: `flex`, flexDirection: `column`, height: `50vh`, padding: `1rem` }}>
 	        <div style={{ flex: `1` }}>
 	          <div>
@@ -18,4 +18,4 @@ const Success = ({ data, location }) => {
     )
 }
 
-export { Success as default }
+export default Success;

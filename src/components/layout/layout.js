@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { useCartContext } from '../../../wrap-with-provider';
 import { CartButton, Cart } from '../shopping-cart/shopping-cart';
-import styles from './layout.module.css';
+import * as styles from  './layout.module.css';
 
 // Close the cart when the route changes
 // There is probably a better way to do this
@@ -22,7 +22,7 @@ const Layout = ({ children, location, prevLocation }) => {
 
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const { isOpenCart, setIsOpenCart } = useCartContext();
-    
+
     // Close the cart when the route changes
     // There is probably a better way to do this.
     // Note that this didn't work: https://stackoverflow.com/a/58524372 ... 
@@ -79,7 +79,7 @@ const Layout = ({ children, location, prevLocation }) => {
                     </div>
                 </footer>
             </div>
-            {isOpenCart && (<div className={styles.layout__shoppingCart} style={{ backgroundColor: `white`, position: `fixed`, top: 0, right: 0, width: `100%`, maxWidth: 400, height: `100vh`, boxShadow: `-4px 0px 30px 0px rgba(0,0,0, 0.06)`, overflowY: `auto`, zIndex: 2 }}>
+            {isOpenCart && (<div className={styles.layout__shoppingCart} style={{ backgroundColor: `white`, position: `fixed`, top: 0, right: 0, width: `100%`, maxWidth: 400, height: `100vh`, boxShadow: `-4px 0px 20px 0px rgba(0,0,0, 0.15)`, overflowY: `auto`, zIndex: 2 }}>
                 <Cart />
             </div>)}
         </div>

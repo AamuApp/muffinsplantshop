@@ -1,10 +1,6 @@
 require('dotenv').config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const cartQuantityTotal = require('../src/selectors/cartQuantity').cartQuantityTotal;
-const cartAmountTotal = require('../src/selectors/cartQuantity').cartAmountTotal;
-const shippingInventory = require('./data/shipping.json');
-const taxrates = require('./data/taxrates.json');
-const calculateOrderAmount = require('./calculateOrderAmount.js');
+const calculateOrderAmount = require('./calculate-order-amount.js');
 
 exports.handler = async (event, context) => {
 

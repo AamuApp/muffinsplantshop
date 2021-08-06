@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import numeral from 'numeral';
 import { useCartContext } from '../../../wrap-with-provider';
 import { cartQuantityTotal, cartAmountTotal } from '../../selectors/cartQuantity';
-import styles from './shopping-cart.module.css';
+import * as styles from  './shopping-cart.module.css';
 
 const AddToCart = ({ title, price, sku, variant, imageSrc }) => {
     const { cartDispatch } = useCartContext();
@@ -15,7 +15,7 @@ const AddToCart = ({ title, price, sku, variant, imageSrc }) => {
             product: { title, price, sku, variant, quantity: 1, imageSrc }
         });
 
-        // console.log({ title, price, sku, variant, imageSrc });
+        console.log('AddToCart', { title, price, sku, variant, imageSrc });
 
         notification.current.textContent = `${title} - ${variant.title} added to cart`;
         notification.current.style.display = 'block';

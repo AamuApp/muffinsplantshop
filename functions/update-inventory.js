@@ -5,7 +5,7 @@ import config from '../config-server.js';
 exports.handler = async (event, context) => {
 
 	try {
-		const { items, shipping, state } = JSON.parse(event.body);
+		const { items } = JSON.parse(event.body);
 		const itemsFromServer = [];
 		const updatedQuantities = [];
 

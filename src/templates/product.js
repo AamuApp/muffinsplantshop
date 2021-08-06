@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import numeral from 'numeral';
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { AddToCart } from '../components/shopping-cart/shopping-cart';
-import styles from './products.module.css';
+import * as styles from  './products.module.css';
 
 const Product = ({ data, location }) => {
     const productData = data.aamu.Product;
@@ -13,11 +13,11 @@ const Product = ({ data, location }) => {
 
     return (
         <Layout location={location}>
-            <SEO title={productData.title} />
+            <Seo title={productData.title} />
             <div className={styles.products__container}>
 
-                <Img
-                    fluid={productData.image.image.childImageSharp.fluid}
+                <GatsbyImage
+                    image={productData.image.image.childImageSharp.gatsbyImageData}
                     alt={productData.title}
                     style={{ border: `solid 1px #EEEEEE` }}
                 />
@@ -53,7 +53,7 @@ const Product = ({ data, location }) => {
                             price={variant.price}
                             sku={productData.sku}
                             variant={variant}
-                            imageSrc={productData.image.image.childImageSharp.fluid.src} />
+                            imageSrc={productData.image.url} />
                     </div>
                     <Link
                         className="link-with-arrow"
@@ -106,21 +106,7 @@ const query = graphql`
                 image {
                   id
                   childImageSharp {
-                    id
-                    fluid {
-                      base64
-                      tracedSVG
-                      srcWebp
-                      srcSetWebp
-                      originalImg
-                      originalName
-                      presentationWidth
-                      presentationHeight
-                      aspectRatio
-                      src
-                      srcSet
-                      sizes
-                    }
+                    gatsbyImageData(layout: FIXED)
                   }
                 }
               }
@@ -154,4 +140,5 @@ const query = graphql`
     }    
 `
 
-export { query, Product as default };
+export { query };
+export default Product;

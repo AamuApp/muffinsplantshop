@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import ProductItem from '../components/product-item/product-item';
 import productSelector from '../selectors/products';
 import { minPrice as _minPrice } from '../helpers/helpers';
-import styles from './styles/shop.module.css';
+import * as styles from  './styles/shop.module.css';
 import '../styles/react-tabs-custom.css';
 
 const Shop = ({ data, location }) => {
@@ -14,7 +14,7 @@ const Shop = ({ data, location }) => {
 
     return (
         <Layout location={location}>
-            <SEO title="Shop" />
+            <Seo title="Shop" />
             <div className="content-container">
                 <h2 className="heading-first">Shop</h2>
             </div>
@@ -61,21 +61,7 @@ const query = graphql`
             image {
               id
               childImageSharp {
-                id
-                fluid {
-                  base64
-                  tracedSVG
-                  srcWebp
-                  srcSetWebp
-                  originalImg
-                  originalName
-                  presentationWidth
-                  presentationHeight
-                  aspectRatio
-                  src
-                  srcSet
-                  sizes
-                }
+                gatsbyImageData(layout: FIXED)
               }
             }            
           }
@@ -109,4 +95,5 @@ const query = graphql`
   }
 `
 
-export { query, Shop as default }
+export { query };
+export default Shop;

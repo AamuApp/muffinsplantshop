@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const About = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <SEO title="About" />
+      <Seo title="About" />
       <div style={{ display: `flex`, flexDirection: `column`, height: `50vh`, padding: `1rem` }}>
         <div style={{ flex: `1` }}>
           <div
@@ -30,4 +30,5 @@ query {
   }
 `
 
-export { query, About as default }
+export { query }
+export default About;

@@ -19,4 +19,4 @@ const Default404 = ({location}) => {
     )
 }
 
-export { Default404 as default };
+export default Default404;

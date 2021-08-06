@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './checkbox.module.css';
+import * as styles from './checkbox.module.css';
 
 const Checkbox = ({ isSelected, onChangeHandler, label }) => {
     const id = label.replace(/\s+/g, '');

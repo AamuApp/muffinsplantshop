@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import numeral from 'numeral';
 import { useCartContext } from '../../../wrap-with-provider';
 import { cartQuantityTotal, cartAmountTotal } from '../../selectors/cartQuantity';
-import styles from './checkout-summary.module.css';
+import * as styles from  './checkout-summary.module.css';
 
 const CheckoutSummary = ({ shippingValues }) => {
     const { cart, cartDispatch } = useCartContext();

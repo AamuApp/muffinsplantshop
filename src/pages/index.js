@@ -1,15 +1,15 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import ProductItem from '../components/product-item/product-item';
-import styles from './styles/home.module.css';
+import * as styles from  './styles/home.module.css';
 import { minPrice as _minPrice } from '../helpers/helpers';
 
 const Home = ({ data, location }) => {
     return (
         <Layout location={location}>
-            <SEO title="Shop Demo" />
+            <Seo title="Shop Demo" />
             <div className={styles.home__cta}>
                 <div className={styles.home__ctaText}>
                     <h2>Plants Are Like Muffins</h2>
@@ -30,7 +30,7 @@ const Home = ({ data, location }) => {
                                 key={node.id}
                                 product={{
                                     slug: node.slug,
-                                    fluid: node.image.image.childImageSharp.fluid,
+                                    image: node.image.image.childImageSharp.gatsbyImageData,
                                     title: node.title,
                                     category: node.category,
                                     minPrice: _minPrice(node.variants)
@@ -72,21 +72,7 @@ const query = graphql`
                 image {
                   id
                   childImageSharp {
-                    id
-                    fluid {
-                      base64
-                      tracedSVG
-                      srcWebp
-                      srcSetWebp
-                      originalImg
-                      originalName
-                      presentationWidth
-                      presentationHeight
-                      aspectRatio
-                      src
-                      srcSet
-                      sizes
-                    }
+                    gatsbyImageData(layout: FIXED)
                   }
                 }                
             }
@@ -125,4 +111,5 @@ const query = graphql`
 }
 `
 
-export { query, Home as default }
+export { query };
+export default Home;

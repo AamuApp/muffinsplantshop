@@ -9,7 +9,7 @@ import CheckoutSummary from './checkout-summary';
 import CheckIcon from './assets/check_circle.svg';
 import MuffinImg from './assets/muffin.svg';
 
-import styles from './checkout-form.module.css';
+import * as styles from  './checkout-form.module.css';
 
 const baseSchema = Yup.object({
     firstName: Yup.string().required("Required"),

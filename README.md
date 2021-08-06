@@ -27,12 +27,6 @@ This is a demo, a starting point that you should probably edit quite a bit until
 - The purchases will be visible at Stripe. Currently they will not be stored into Aamu.app. This is something you can change if you need to.
 - At the moment there is no email confirmation for the customer. This is also something that needs to be added when this is taken to production use.
 
-## Live demo hosted on Netlify
-[https://aamu-muffinsplantshop.netlify.app/](https://aamu-muffinsplantshop.netlify.app/)
-
-## Payment processing
-Card payment via Stripe in testing mode; please use testing card details shown on the form
-
 ## Deploying to Netlify
 
 You can deploy this on Netlify: 
@@ -41,5 +35,15 @@ You can deploy this on Netlify:
 
 Deployment to Netlify asks your **Aamu.app API key** and **Stripe Secret key**.
 
-### What I learned by building an online store with Gatsby and Stripe
-[Read Nancy's blog post](https://dev.to/nhuynh1/five-things-i-learned-by-building-my-own-shopping-cart-and-checkout-with-gatsby-and-stripe-273k)
+## Developing locally
+
+Run:
+
+```
+npm install
+npm run netlify
+```
+
+## Live demo hosted on Netlify
+[https://aamu-muffinsplantshop.netlify.app/](https://aamu-muffinsplantshop.netlify.app/)
+
