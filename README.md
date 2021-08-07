@@ -35,6 +35,15 @@ You can deploy this on Netlify:
 
 Deployment to Netlify asks your **Aamu.app API key** and **Stripe Secret key**.
 
+#### Common Netlify errors
+
+```
+2:33:39 PM: error "gatsby-source-graphql" threw an error while running the sourceNodes lifecycle:
+2:33:39 PM: not finished source and transform nodes - 0.593s
+```
+
+Your Aamu.app API key is wronng or missing.
+
 ## Developing locally
 
 Run:
