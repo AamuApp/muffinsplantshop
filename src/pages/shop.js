@@ -26,7 +26,7 @@ const Shop = ({ data, location }) => {
                                 key={product.id}
                                 product={{
                                     slug: product.slug,
-                                    fluid: product.image.image.childImageSharp.fluid,
+                                    image: product.image.image.childImageSharp.gatsbyImageData,
                                     title: product.title,
                                     category: product.category,
                                     minPrice: _minPrice(product.variants)
@@ -61,7 +61,7 @@ const query = graphql`
             image {
               id
               childImageSharp {
-                gatsbyImageData(layout: FIXED)
+                gatsbyImageData(layout: CONSTRAINED)
               }
             }            
           }
